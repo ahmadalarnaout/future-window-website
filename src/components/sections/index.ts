@@ -1,0 +1,10 @@
+export { HeroSection } from "./HeroSection";
+export { WhoWeAreSection } from "./WhoWeAreSection";
+export { VisionMissionSection } from "./VisionMissionSection";
+export { CoreValuesSection } from "./CoreValuesSection";
+export { SolutionsSection } from "./SolutionsSection";
+export { AdvantageSection } from "./AdvantageSection";
+export { OrgStructureSection } from "./OrgStructureSection";
+export { StatsSection } from "./StatsSection";
+export { PartnerCTASection } from "./PartnerCTASection";
+export { ContactSection } from "./ContactSection";
