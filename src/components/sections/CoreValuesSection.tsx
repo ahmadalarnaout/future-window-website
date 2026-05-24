@@ -1,7 +1,20 @@
+"use client";
+
+import { useRef, useState, useCallback } from "react";
 import Image from "next/image";
 import { coreValuesData } from "@/data/sections";
 
 export function CoreValuesSection() {
+  const patternRef = useRef<HTMLDivElement>(null);
+  const [origin, setOrigin] = useState("50% 50%");
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    setOrigin(`${x}% ${y}%`);
+  }, []);
   return (
     <section className="pb-stack-lg px-margin-mobile md:px-margin-desktop">
       <div className="max-w-[1440px] mx-auto">
@@ -46,14 +59,23 @@ export function CoreValuesSection() {
             </div>
           </div>
 
-          {/* Decorative Image — spans 1 col, 2 rows */}
-          <div className="hidden md:block md:col-span-1 md:row-span-2 rounded-xl overflow-hidden relative border border-outline-variant/20">
-            <div className="absolute inset-0 sadu-pattern opacity-20 z-10 mix-blend-overlay" />
+          {/* Decorative Sadu Pattern — spans 1 col, 2 rows */}
+          <div
+            ref={patternRef}
+            className="hidden md:block md:col-span-1 md:row-span-2 rounded-xl overflow-hidden relative border border-outline-variant/20 cursor-pointer"
+            onMouseMove={handleMouseMove}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
             <Image
-              src={coreValuesData.image.src}
-              alt={coreValuesData.image.alt}
+              src="/images/sadu-pattern.png"
+              alt="Sadu chevron pattern"
               fill
-              className="object-cover grayscale contrast-125"
+              className="object-cover transition-transform duration-300 ease-out"
+              style={{
+                transform: isHovered ? "scale(1.15)" : "scale(1)",
+                transformOrigin: origin,
+              }}
             />
           </div>
 
