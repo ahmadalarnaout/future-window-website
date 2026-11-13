@@ -5,16 +5,18 @@ import Image from "next/image";
 import { cn } from "@/lib/cn";
 import { navLinks } from "@/config/navigation";
 import { MobileDrawer } from "./MobileDrawer";
+import Link from "next/link";
 
-export function Navbar() {
-  const [activeSection, setActiveSection] = useState("");
+export function Navbar({ activePath = "" }: { activePath?: string }) {
+  const [activeSection, setActiveSection] = useState(activePath);
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   useEffect(() => {
     const observers: IntersectionObserver[] = [];
 
     for (const link of navLinks) {
-      const id = link.href.replace("#", "");
+      const id = link.href.split("#")[1];
+      if (!id) continue;
       const el = document.getElementById(id);
       if (!el) continue;
 
@@ -38,19 +40,20 @@ export function Navbar() {
       <nav className="fixed z-50 top-6 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-5xl bg-[#121414]/90 backdrop-blur-md border border-outline-variant/40 rounded-full transition-all duration-300 ease-in-out shadow-lg h-14">
         <div className="flex justify-between items-center px-4 w-full h-full">
           {/* Brand */}
-          <a
+          <Link
             className="flex items-center h-full pl-4 md:pl-6"
-            href="#"
+            href="/"
+            aria-label="Future Window — home"
           >
             <Image
               src="/logo.png"
-              alt="Eduverse Logo"
+              alt="Future Window logo"
               width={64}
               height={128}
               className="w-auto h-[80px] max-w-none object-contain"
               priority
             />
-          </a>
+          </Link>
 
           {/* Desktop Links */}
           <div className="hidden md:flex items-center space-x-1">
@@ -72,12 +75,12 @@ export function Navbar() {
 
           {/* CTA */}
           <div className="hidden md:block pr-1">
-            <a
+            <Link
               className="inline-flex items-center justify-center px-5 py-2 bg-primary-container text-on-primary-container font-body text-label-sm rounded-full hover:bg-primary transition-colors uppercase tracking-wider"
-              href="#contact"
+              href="/#contact"
             >
               Get Started
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Toggle */}

@@ -25,9 +25,6 @@ export function PartnerCTASection() {
             <span>Get in Touch</span>
             <span className="material-symbols-outlined">arrow_forward</span>
           </a>
-          <button className="bg-transparent border border-primary-container text-primary font-body text-title-md px-8 py-4 rounded-lg transition-all hover:bg-surface-variant/50 w-full md:w-auto font-medium">
-            Download Full Profile
-          </button>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto border-t border-outline-variant/30 pt-12">
           <div>
@@ -42,27 +39,17 @@ export function PartnerCTASection() {
             <div className="font-body text-label-sm text-on-surface-variant uppercase tracking-widest mb-2">
               Direct Inquiry
             </div>
-            <div className="font-body text-body-md text-primary">
+            <a href="mailto:contact@futurewindow.me" className="font-body text-body-md text-primary hover:underline underline-offset-4">
               contact@futurewindow.me
-            </div>
+            </a>
           </div>
           <div>
             <div className="font-body text-label-sm text-on-surface-variant uppercase tracking-widest mb-2">
-              Connect
+              Pricing &amp; Terms
             </div>
-            <div className="flex justify-center gap-4 text-on-surface-variant">
-              <a
-                className="hover:text-primary transition-colors"
-                href="#"
-              >
-                <span className="material-symbols-outlined">language</span>
-              </a>
-              <a
-                className="hover:text-primary transition-colors"
-                href="#"
-              >
-                <span className="material-symbols-outlined">mail</span>
-              </a>
+            <div className="font-body text-body-md flex justify-center gap-4">
+              <a href="/pricing" className="text-primary hover:underline underline-offset-4">Price list</a>
+              <a href="/terms" className="text-on-surface-variant hover:text-primary hover:underline underline-offset-4">Terms</a>
             </div>
           </div>
         </div>

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { contactData } from "@/data/sections";
+import { ContactForm } from "./ContactForm";
 
 export function ContactSection() {
   return (
@@ -27,83 +28,7 @@ export function ContactSection() {
             <h3 className="font-heading text-headline-lg text-on-surface mb-8 font-semibold">
               {contactData.formTitle}
             </h3>
-            <form
-              className="space-y-8 relative z-10"
-              onSubmit={(e) => e.preventDefault()}
-            >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="relative group/input">
-                  <label
-                    className="font-body text-label-sm text-on-surface-variant uppercase tracking-widest block mb-2 transition-colors group-focus-within/input:text-primary"
-                    htmlFor="name"
-                  >
-                    Entity / Name
-                  </label>
-                  <input
-                    className="w-full bg-transparent border-0 border-b border-outline-variant py-2 px-0 text-on-surface font-body text-body-md focus:ring-0 focus:border-primary transition-colors placeholder:text-surface-variant"
-                    id="name"
-                    placeholder="Ministry of Education"
-                    type="text"
-                  />
-                </div>
-                <div className="relative group/input">
-                  <label
-                    className="font-body text-label-sm text-on-surface-variant uppercase tracking-widest block mb-2 transition-colors group-focus-within/input:text-primary"
-                    htmlFor="role"
-                  >
-                    Department
-                  </label>
-                  <input
-                    className="w-full bg-transparent border-0 border-b border-outline-variant py-2 px-0 text-on-surface font-body text-body-md focus:ring-0 focus:border-primary transition-colors placeholder:text-surface-variant"
-                    id="role"
-                    placeholder="Strategic Partnerships"
-                    type="text"
-                  />
-                </div>
-              </div>
-              <div className="relative group/input">
-                <label
-                  className="font-body text-label-sm text-on-surface-variant uppercase tracking-widest block mb-2 transition-colors group-focus-within/input:text-primary"
-                  htmlFor="email"
-                >
-                  Official Email
-                </label>
-                <input
-                  className="w-full bg-transparent border-0 border-b border-outline-variant py-2 px-0 text-on-surface font-body text-body-md focus:ring-0 focus:border-primary transition-colors placeholder:text-surface-variant"
-                  id="email"
-                  placeholder="contact@gov.sa"
-                  type="email"
-                />
-              </div>
-              <div className="relative group/input">
-                <label
-                  className="font-body text-label-sm text-on-surface-variant uppercase tracking-widest block mb-2 transition-colors group-focus-within/input:text-primary"
-                  htmlFor="message"
-                >
-                  Inquiry Details
-                </label>
-                <textarea
-                  className="w-full bg-transparent border-0 border-b border-outline-variant py-2 px-0 text-on-surface font-body text-body-md focus:ring-0 focus:border-primary transition-colors resize-none placeholder:text-surface-variant"
-                  id="message"
-                  placeholder="Outline your proposed initiative or request..."
-                  rows={4}
-                />
-              </div>
-              <div className="pt-4 flex flex-col sm:flex-row justify-between items-center gap-4">
-                <span className="font-body text-label-sm text-surface-variant flex items-center gap-2">
-                  <span className="material-symbols-outlined text-[16px]">
-                    lock
-                  </span>{" "}
-                  Secure Transmission
-                </span>
-                <button
-                  className="bg-primary hover:bg-primary-fixed-dim text-on-primary font-body text-label-sm uppercase tracking-widest px-8 py-4 rounded transition-all duration-300 shadow-[0_0_15px_rgba(197,160,89,0.1)] hover:shadow-[0_0_25px_rgba(197,160,89,0.3)] w-full sm:w-auto"
-                  type="submit"
-                >
-                  Transmit Protocol
-                </button>
-              </div>
-            </form>
+            <ContactForm />
           </div>
 
           {/* Info Cards */}
@@ -146,11 +71,11 @@ export function ContactSection() {
                 {contactData.email.title}
               </h3>
               <a
-                className="font-body text-title-md text-on-surface hover:text-primary transition-colors inline-flex items-center gap-2 group/link w-fit font-medium"
+                className="font-body text-body-lg sm:text-title-md text-on-surface hover:text-primary transition-colors inline-flex items-center gap-2 group/link max-w-full font-medium"
                 href={`mailto:${contactData.email.address}`}
               >
-                {contactData.email.address}
-                <span className="material-symbols-outlined text-[18px] opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all text-primary">
+                <span className="min-w-0 break-all sm:break-normal">{contactData.email.address}</span>
+                <span className="material-symbols-outlined text-[18px] shrink-0 opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all text-primary">
                   arrow_forward
                 </span>
               </a>

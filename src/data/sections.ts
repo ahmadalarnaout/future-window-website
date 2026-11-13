@@ -2,7 +2,7 @@ export const heroData = {
   headline: "Architecting Digital Growth for",
   headlineAccent: "Brands, Businesses & SaaS Products.",
   subheadline:
-    "Future Window helps businesses grow through digital marketing, brand identity, building websites, automation systems, and scalable SaaS products.",
+    "Future Window helps businesses grow through websites, mobile apps, UI/UX design, automation and AI systems, and scalable SaaS products.",
   cta: { label: "Explore Our Work", href: "#who-we-are" },
 };
 
@@ -10,7 +10,7 @@ export const whoWeAreData = {
   label: "Who We Are",
   heading: "A Saudi Digital Growth & Product Company",
   description:
-    "Future Window operates across four core directions: digital marketing, brand and web development, automation and AI systems, and building scalable SaaS products. We work with companies and institutions that need strategic execution — from growing their brand presence to launching custom digital products.",
+    "Future Window operates across four core directions: web and app development, UI/UX design, automation and AI systems, and scalable SaaS products. We work with startups and growing companies that need strategic execution — from launching their first website to building custom digital products.",
   coreBelief: {
     icon: "foundation",
     title: "Our Approach",
@@ -67,7 +67,7 @@ export const coreValuesData = {
       number: "01",
       title: "Innovation",
       description:
-        "We build solutions that solve real problems in new ways — from marketing systems to custom SaaS platforms.",
+        "We build solutions that solve real problems in new ways — from automated workflows to custom SaaS platforms.",
       icon: "lightbulb",
       span: "large",
     },
@@ -106,21 +106,21 @@ export const solutionsData = {
   label: "What We Do",
   heading: "Digital Solutions That Deliver",
   description:
-    "From marketing and branding to automation and SaaS development — every service is designed to create measurable business outcomes.",
+    "From websites and interface design to automation and SaaS development — every service is designed to create measurable business outcomes.",
   solutions: [
     {
-      icon: "campaign",
-      title: "Digital Marketing Solutions",
+      icon: "devices",
+      title: "Web & App Development",
       description:
-        "End-to-end marketing execution — social media management, content creation, paid campaigns, and performance analytics. We handle strategy through delivery so your brand stays visible and growing.",
-      features: ["Social media & content strategy", "Performance marketing & analytics"],
+        "Fast, responsive websites, landing pages and mobile apps — designed, built and launched end to end, in Arabic and English, so your business is ready to meet its customers online.",
+      features: ["Landing pages & company websites", "Mobile apps for iOS & Android"],
       span: "large",
     },
     {
-      icon: "palette",
-      title: "Brand & Web Solutions",
+      icon: "design_services",
+      title: "UI/UX Design",
       description:
-        "From visual identity and brand systems to fully built websites and landing pages — we create cohesive digital presences that convert visitors into customers.",
+        "User journeys, interface design and clickable prototypes for apps and platforms — clear, usable screens that are ready for development.",
       features: [],
       span: "small",
     },
@@ -136,7 +136,7 @@ export const solutionsData = {
       icon: "rocket_launch",
       title: "Product & SaaS Development",
       description:
-        "We build scalable SaaS products — both our own ventures (Eduverse, Alyaf) and custom platforms for clients: dashboards, portals, CRM systems, booking platforms, and internal tools built to grow with your business.",
+        "We build custom SaaS platforms for clients — dashboards, portals, CRM systems, booking platforms and internal tools built to grow with your business. We are also developing two products in-house, Eduverse and Alyaf.",
       features: [],
       span: "full",
     },
@@ -163,7 +163,7 @@ export const advantageData = {
       icon: "inventory_2",
       title: "Product Builders at Heart",
       description:
-        "We build and operate our own SaaS products (Eduverse, Alyaf). That experience — from MVP to market — shapes how we build for clients.",
+        "We are developing SaaS products in-house (Eduverse and Alyaf, both in development). That experience — from MVP to market — shapes how we build for clients.",
       filled: false,
       span: "small",
       badge: "",
@@ -181,7 +181,7 @@ export const advantageData = {
       icon: "hub",
       title: "Full-Stack Capability",
       description:
-        "Marketing, branding, development, automation, and SaaS — under one roof. One team, one vision, no fragmented vendors.",
+        "Design, development, automation, AI and SaaS — under one roof. One team, one vision, no fragmented vendors.",
       filled: false,
       span: "small",
       badge: "",
@@ -201,21 +201,21 @@ export const advantageData = {
 export const orgStructureData = {
   heading: "Our Business Directions",
   description:
-    "Future Window operates through four interconnected verticals — marketing, branding, automation, and product development.",
+    "Future Window operates through four interconnected verticals — web and apps, UI/UX design, automation and AI, and product development.",
   departments: [
     {
-      icon: "campaign",
-      title: "Digital Marketing",
+      icon: "devices",
+      title: "Web & Apps",
       description:
-        "Full-service marketing execution — from strategy and content to campaign management and analytics.",
-      items: ["Social Media Management", "Creative & Content Production"],
+        "Websites, landing pages and mobile apps — designed, built and launched end to end.",
+      items: ["Landing Pages & Company Websites", "Mobile Apps (iOS & Android)"],
     },
     {
-      icon: "palette",
-      title: "Brand & Web Solutions",
+      icon: "design_services",
+      title: "UI/UX Design",
       description:
-        "Building brands, websites, and digital presences that companies need to grow and compete.",
-      items: ["Brand Identity & Design", "Web Development & Landing Pages"],
+        "Interfaces and user journeys that make digital products clear, usable and ready for development.",
+      items: ["User Journeys & Interface Design", "Clickable Prototypes"],
     },
     {
       icon: "smart_toy",
@@ -228,8 +228,8 @@ export const orgStructureData = {
       icon: "rocket_launch",
       title: "Product & SaaS",
       description:
-        "Proprietary digital products and custom SaaS platforms built and operated by Future Window.",
-      items: ["Eduverse — Education Technology", "Alyaf — Fitness & Wellness", "Custom SaaS for Businesses"],
+        "Custom SaaS platforms for clients, alongside products we are developing in-house.",
+      items: ["Custom SaaS for Businesses", "Eduverse — EdTech (in development)", "Alyaf — Fitness (in development)"],
     },
   ],
 };
@@ -240,9 +240,9 @@ export const statsData = {
     "A snapshot of who we are and what we're building.",
   stats: [
     { value: "4", label: "Business Directions" },
-    { value: "2", label: "Proprietary Products" },
+    { value: "2", label: "Products in Development" },
     { value: "Riyadh", label: "Headquarters" },
-    { value: "2026", label: "Year Founded" },
+    { value: "LLC", label: "Saudi Limited Liability Company" },
   ],
   image: {
     src: "/images/dashboard.jpg",
@@ -253,7 +253,7 @@ export const statsData = {
 export const partnerCtaData = {
   heading: "Let's Build Something Together.",
   description:
-    "Whether you need a marketing partner, a SaaS development team, or a long-term digital growth collaborator — we're ready.",
+    "Whether you need a new website, a SaaS development team, or a long-term technology partner — we're ready.",
   contacts: [
     { label: "Headquarters", value: "Riyadh, Kingdom of Saudi Arabia" },
     {

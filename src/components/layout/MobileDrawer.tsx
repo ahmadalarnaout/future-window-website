@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { cn } from "@/lib/cn";
 import { navLinks } from "@/config/navigation";
+import Link from "next/link";
 
 interface MobileDrawerProps {
   open: boolean;
@@ -81,13 +82,13 @@ export function MobileDrawer({ open, onClose, activeSection }: MobileDrawerProps
 
         {/* CTA */}
         <div className="px-6 pb-8">
-          <a
-            href="#contact"
+          <Link
+            href="/#contact"
             onClick={onClose}
             className="flex items-center justify-center w-full px-5 py-3 bg-primary-container text-on-primary-container font-body text-label-sm rounded-full hover:bg-primary transition-colors uppercase tracking-wider"
           >
             Get Started
-          </a>
+          </Link>
         </div>
       </div>
     </>

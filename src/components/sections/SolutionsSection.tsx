@@ -27,7 +27,7 @@ export function SolutionsSection() {
       <div className="py-stack-lg px-margin-mobile md:px-margin-desktop">
         <div className="max-w-[1440px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-gutter">
-            {/* Digital Marketing — Large Card */}
+            {/* Web & App Development — Large Card */}
             <div className="col-span-1 md:col-span-8 bg-surface-container-low rounded-xl border border-outline-variant/30 p-8 md:p-12 relative overflow-hidden group ambient-glow transition-all duration-300">
               <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-primary/10 transition-colors duration-500" />
               <div className="relative z-10 h-full flex flex-col justify-between">
@@ -64,7 +64,7 @@ export function SolutionsSection() {
               </div>
             </div>
 
-            {/* Brand & Web — Small Card */}
+            {/* UI/UX Design — Small Card */}
             <div className="col-span-1 md:col-span-4 bg-surface-container-low rounded-xl border border-outline-variant/30 p-8 relative overflow-hidden group ambient-glow transition-all duration-300 flex flex-col justify-between">
               <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-surface-container-high/50 to-transparent pointer-events-none" />
               <div className="relative z-10">
